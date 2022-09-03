@@ -33,10 +33,29 @@ const Contact = () => {
             </div>
 
             <form action="">
-                <input type="text" name='name' placeholder='Your Full Name' required/>
-                <input type="email" name='email' placeholder='Your Email' required />
+                <label htmlFor="form-fullname">Send me a direct email</label>
+                <input 
+                  id='form-fullname' type="text" name='name' placeholder='Your Full Name' required
+                  list='fullname-list'
+                />
+                <input 
+                  type="email"
+                  name='email'
+                  placeholder='Your Email'
+                  required pattern='\b[\w\.-]+@[\w\.-]+\.\w{2,}\b'
+                  title='must be a valid email address like "example.email@service.com"'
+                  />
                 <textarea name="message" rows="7" placeholder='Your message' required></textarea>
                 <button type='submit' className='btn btn-primary'>Send message</button>
+
+                <datalist id='fullname-list'>
+                  <option value="John"></option>
+                  <option value="Bob"></option>
+                  <option value="Lea"></option>
+                  <option value="Steve"></option>
+                  <option value="Chloe"></option>
+                  <option value="Elie"></option>
+                </datalist>
             </form>
         </div>
     </section>
