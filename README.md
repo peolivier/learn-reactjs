@@ -11,3 +11,8 @@ npm install react-router-dom
 
 ```
 
+# Web tools, docs and links
+
+https://angrytools.com/gradient/  
+https://animista.net/  
+
